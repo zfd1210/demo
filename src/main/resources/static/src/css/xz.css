@@ -1,0 +1,164 @@
+.container-fluid .attention {
+  overflow: scroll;
+}
+.container-fluid .attention .closeBtn {
+  font-size: 18px;
+  font-weight: bolder;
+  height: 30px;
+}
+.container-fluid .attention .closeBtn span {
+  line-height: 30px;
+}
+.container-fluid .attention .closeBtn button span {
+  line-height: 30px;
+}
+.container-fluid .attention .project {
+  font-size: 12px;
+  margin-top: 5px;
+}
+.container-fluid .attention .project .leftimg {
+  margin-top: 2px;
+  text-align: center;
+  margin-left: -5px;
+}
+.container-fluid .attention .project .leftimg img {
+  margin-left: -6px;
+  width: 100px;
+  height: 50px;
+}
+.container-fluid .attention .project .l1 .starsImg {
+  margin-top: 2px;
+  background: url(../img/stars.png);
+  width: 55px;
+  height: 11px;
+  margin-left: -15px;
+  background-position: 0 0;
+  overflow: hidden;
+}
+.container-fluid .attention .project .l1 p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 55px;
+  margin-left: -15px;
+  text-align: center;
+}
+.container-fluid .attention .project .l1 .l1_con1 {
+  font-size: 14px;
+  font-weight: bolder;
+}
+.container-fluid .attention .project .l2 {
+  margin-left: 5px;
+  border-left: 3px solid #ccc;
+}
+.container-fluid .attention .project .l2 p {
+  margin-left: -8px;
+  width: 55px;
+  margin-top: 2px;
+  padding: 0;
+  margin-bottom: 2px;
+}
+.container-fluid .attention .project .l2 .l2_con1 {
+  margin-top: -2px;
+  margin-left: -8px;
+  font-size: 14px;
+  font-weight: bolder;
+}
+.container-fluid .attention .project .right button {
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.container-fluid .orderForm {
+  overflow: scroll;
+}
+.container-fluid .orderForm .closeBtn {
+  font-size: 18px;
+  font-weight: bolder;
+  height: 30px;
+}
+.container-fluid .orderForm .closeBtn span {
+  line-height: 30px;
+}
+.container-fluid .orderForm .closeBtn button span {
+  line-height: 30px;
+}
+.container-fluid .orderForm .order button {
+  height: 100px;
+}
+.container-fluid .orderForm .order button img {
+  width: 80px;
+  height: 80px;
+}
+.container-fluid .orderForm .order button span {
+  margin-left: 10px;
+  font-weight: bolder;
+}
+.container-fluid .orderForm .orderContent {
+}
+.container-fluid .orderForm .orderContent img {
+  margin-top: 10px;
+  width: 150px;
+  height: 120px;
+  margin-left: 15px;
+}
+.container-fluid .orderForm .orderContent span {
+  margin-top: 10px;
+  margin-left: 25px;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.container-fluid .orderForm .orderContent p {
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.container-fluid .orderForm .orderContent .return {
+  text-decoration: underline;
+  font-size: 18px;
+  color: #777;
+}
+
+
+.container-fluid .userMessage {
+  overflow: scroll;
+  position: relative;
+}
+.container-fluid .userMessage .closeBtn {
+  font-size: 18px;
+  font-weight: bolder;
+  height: 30px;
+}
+.container-fluid .userMessage .closeBtn span {
+  line-height: 30px;
+}
+.container-fluid .userMessage .closeBtn button span {
+  line-height: 30px;
+}
+.container-fluid .userMessage .user .f_btn button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.container-fluid .userMessage .user .list-group button {
+  height: 60px;
+  position: relative;
+  margin-bottom: 10px;
+}
+.container-fluid .userMessage .user .list-group button span {
+  line-height: 40px;
+  font-size: 18px;
+  margin-right: 10px;
+}
+.container-fluid .userMessage .user .list-group button span:nth-child(1) {
+  width: 80px;
+}
+.container-fluid .userMessage .user .list-group button input {
+  position: absolute;
+  right: 10px;
+}
+.container-fluid .userMessage .user .end {
+  font-size: 16px;
+  color: #888;
+}
+.container-fluid .userMessage .updata {
+  margin-top: 200px;
+}

@@ -1,0 +1,525 @@
+.container-fluid {
+    .footer {
+        z-index: 999;
+        background: #fff;
+        border-top: 1px solid #ccc;
+        padding-top: 8px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+
+        div {
+            a {
+                color: #424242;
+                text-decoration: none;
+
+                span:nth-child(1) {
+                    margin-left: 6px;
+                    margin-right: 5px;
+                }
+
+                span:nth-child(2) {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .content {
+        // display: none;
+        overflow: scroll;
+
+        .head {
+            position: relative;
+            background: #424242;
+            border: 1px solid transparent;
+            font-size: 18px;
+            color: #fff;
+            height: 200px;
+
+            .headleft {
+                margin-top: 80px;
+                margin-left: 20px;
+
+                img {
+                    width: 90px;
+                    height: 90px;
+                }
+            }
+
+            .er {
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                right: 0;
+                bottom: 30px;
+            }
+        }
+
+        .pro {
+            border: 1px solid #ccc;
+            font-size: 18px;
+            font-weight: bolder;
+        }
+    }
+
+    .myMessage {
+        display: none;
+    }
+
+    .buyTicket {
+        display: none;
+        overflow: scroll;
+        .closeBtn {
+            font-size: 18px;
+            font-weight: bolder;
+            height: 30px;
+
+            span {
+                line-height: 30px;
+            }
+
+            button {
+                span {
+                    line-height: 30px;
+                }
+            }
+        }
+        .buy01{
+            button {
+                height: 60px;
+                position: relative;
+                margin-bottom: 10px;
+
+                span {
+                    display: inline-block;
+                    line-height: 40px;
+                    font-size: 18px;
+                    margin-right: 10px;
+
+                    &:nth-child(1) {
+                        width: 80px;
+                    }
+                }
+                input {
+                    position: absolute;
+                    right: 10px;
+                    display: inline-block;
+                    top: 20px;
+                }
+            }
+        }
+        .buy02{
+            .project {
+                font-size: 12px;
+                margin-top: 5px;
+    
+                .leftimg {
+                    margin-top: 2px;
+                    text-align: center;
+                    margin-left: -5px;
+    
+                    img {
+                        margin-left: -6px;
+                        width: 100px;
+                        height: 50px;
+                    }
+                }
+    
+                .l1 {
+                    .starsImg {
+                        margin-top: 2px;
+                        background: url(./../img/stars.png);
+                        width: 55px;
+                        height: 11px;
+                        margin-left: -15px;
+                        background-position: 0 0;
+                        overflow: hidden;
+                    }
+    
+                    p {
+                        margin-top: 5px;
+                        margin-bottom: 5px;
+                        width: 55px;
+                        margin-left: -15px;
+                        text-align: center;
+                    }
+    
+                    .l1_con1 {
+                        font-size: 14px;
+                        font-weight: bolder;
+                    }
+                }
+    
+                .l2 {
+    
+                    margin-left: 5px;
+                    border-left: 3px solid #ccc;
+    
+                    p {
+                        margin-left: -8px;
+                        width: 55px;
+                        margin-top: 2px;
+                        padding: 0;
+                        margin-bottom: 2px;
+                    }
+    
+                    .l2_con1 {
+                        margin-top: -2px;
+                        margin-left: -8px;
+                        font-size: 14px;
+                        font-weight: bolder;
+                    }
+                }
+    
+                .right {
+                    button {
+                        margin-top: 15px;
+                        margin-left: 35px;
+                    }
+    
+                }
+            }
+        }
+        .buysuccess{
+            display: none;
+            p:nth-child(1){
+                margin-top: 30px;
+                font-size: 26px;
+                font-weight: bolder;
+            }p:nth-child(2){
+                margin-top: 30px;
+                font-size: 30px;
+                font-weight: bolder;
+            }
+        }
+    }
+
+    .userMessage {
+        overflow: scroll;
+        position: relative;
+        display: none;
+
+        .closeBtn {
+            font-size: 18px;
+            font-weight: bolder;
+            height: 30px;
+
+            span {
+                line-height: 30px;
+            }
+
+            button {
+                span {
+                    line-height: 30px;
+                }
+            }
+        }
+
+        .user {
+
+            .f_btn {
+                button {
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+            }
+
+            .list-group {
+                button {
+                    height: 60px;
+                    position: relative;
+                    margin-bottom: 10px;
+
+                    span {
+                        display: inline-block;
+                        line-height: 40px;
+                        font-size: 18px;
+                        margin-right: 10px;
+
+                        &:nth-child(1) {
+                            width: 80px;
+                        }
+                    }
+
+                    input {
+                        position: absolute;
+                        right: 10px;
+                    }
+                }
+
+            }
+
+            .end {
+                font-size: 16px;
+                color: #888;
+            }
+        }
+
+        .updata {
+            display: none;
+            margin-top: 200px;
+        }
+    }
+
+    .orderForm {
+        display: none;
+        overflow: scroll;
+
+        .closeBtn {
+            font-size: 18px;
+            font-weight: bolder;
+            height: 30px;
+
+            span {
+                line-height: 30px;
+            }
+
+            button {
+                span {
+                    line-height: 30px;
+                }
+            }
+        }
+
+        .order {
+
+            button {
+                height: 100px;
+
+                img {
+                    width: 80px;
+                    height: 80px;
+                }
+
+                span {
+
+                    margin-left: 10px;
+                    font-weight: bolder;
+                }
+            }
+        }
+
+        .orderContent {
+            display: none;
+
+            img {
+                margin-top: 10px;
+                width: 150px;
+                height: 120px;
+                margin-left: 15px;
+            }
+
+            span {
+                margin-top: 10px;
+                margin-left: 25px;
+                font-size: 18px;
+                font-weight: bolder;
+            }
+
+            p {
+                margin-top: 30px;
+                font-size: 18px;
+                font-weight: bolder;
+
+            }
+
+            .return {
+                text-decoration: underline;
+                font-size: 18px;
+                color: #777;
+            }
+        }
+    }
+
+    // 关注项目
+    .attention {
+        display: none;
+        overflow: scroll;
+
+        .closeBtn {
+            font-size: 18px;
+            font-weight: bolder;
+            height: 30px;
+
+            span {
+                line-height: 30px;
+            }
+
+            button {
+                span {
+                    line-height: 30px;
+                }
+            }
+        }
+
+        //关注项目
+        .project {
+            font-size: 12px;
+            margin-top: 5px;
+
+            .leftimg {
+                margin-top: 2px;
+                text-align: center;
+                margin-left: -5px;
+
+                img {
+                    margin-left: -6px;
+                    width: 100px;
+                    height: 50px;
+                }
+            }
+
+            .l1 {
+                .starsImg {
+                    margin-top: 2px;
+                    background: url(./../img/stars.png);
+                    width: 55px;
+                    height: 11px;
+                    margin-left: -15px;
+                    background-position: 0 0;
+                    overflow: hidden;
+                }
+
+                p {
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    width: 55px;
+                    margin-left: -15px;
+                    text-align: center;
+                }
+
+                .l1_con1 {
+                    font-size: 14px;
+                    font-weight: bolder;
+                }
+            }
+
+            .l2 {
+
+                margin-left: 5px;
+                border-left: 3px solid #ccc;
+
+                p {
+                    margin-left: -8px;
+                    width: 55px;
+                    margin-top: 2px;
+                    padding: 0;
+                    margin-bottom: 2px;
+                }
+
+                .l2_con1 {
+                    margin-top: -2px;
+                    margin-left: -8px;
+                    font-size: 14px;
+                    font-weight: bolder;
+                }
+            }
+
+            .right {
+                button {
+                    margin-top: 15px;
+                    margin-left: 10px;
+                }
+
+            }
+        }
+
+    }
+
+    .service {
+        display: none;
+        overflow: scroll;
+
+        .closeBtn {
+            font-size: 18px;
+            font-weight: bolder;
+            display: block;
+
+            span {
+                line-height: 30px;
+            }
+
+            button {
+                span {
+                    line-height: 30px;
+                }
+            }
+        }
+
+        .ser_con {
+            margin-top: 50px;
+            .que {
+                p {
+                    width: 85%;
+                    border: 2px solid #ccc;
+                    padding: 3px;
+                    margin-left: 5px;
+                    font-size: 18px;
+                }
+            }
+            .answer{
+                display: none;
+                p{
+                    font-size: 22px;
+                    padding: 10px;
+                    &:nth-child(2){
+                        font-size: 20px;
+                    }
+                }
+                a{
+                    display: inline-block;
+                    width: 100%;
+                    color: #424242;
+                    font-size: 14px;
+                    text-align: right;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+
+    .setSystem {
+        display: none;
+        overflow: scroll;
+        .closeBtn {
+            font-size: 18px;
+            font-weight: bolder;
+            display: block;
+            span {
+                line-height: 30px;
+            }
+
+            button {
+                span {
+                    line-height: 30px;
+                }
+            }
+        }
+        .sys_fun{
+            margin-top: 50px;
+            p{
+                font-size: 20px;
+                padding: 10px;
+                border: 2px solid #ccc;
+                border-bottom: 5px solid #ccc;
+            }
+        }
+        .sys_con{
+            display: none;
+            p{
+                font-size: 20px;
+                color: #ccc;
+            }
+            a{
+                display: inline-block;
+                width: 100%;
+                color: #424242;
+                font-size: 14px;
+                text-align: right;
+                margin-top: 15px;
+                padding: 10px;
+            }
+        }
+    }
+}

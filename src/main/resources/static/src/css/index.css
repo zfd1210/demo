@@ -1,0 +1,112 @@
+.container-fluid {
+  box-sizing: border-box;
+}
+.container-fluid .header {
+  border-bottom: 1px solid #ccc;
+}
+.container-fluid .header .map {
+  line-height: 14px;
+}
+.container-fluid .header .map p span {
+  display: inline-block;
+  margin-left: 5px;
+}
+.container-fluid .header .search .input-group {
+  margin-top: 10px;
+}
+.container-fluid .footer {
+  z-index: 999;
+  background: #fff;
+  border-top: 1px solid #ccc;
+  padding-top: 8px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.container-fluid .footer div a {
+  color: #424242;
+  text-decoration: none;
+}
+.container-fluid .footer div a span:nth-child(1) {
+  margin-left: 6px;
+  margin-right: 5px;
+}
+.container-fluid .footer div a span:nth-child(2) {
+  font-size: 14px;
+}
+.container-fluid .content {
+  overflow: scroll;
+}
+.container-fluid .content .sort p {
+  margin: 0;
+  background: #eee;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  float: left;
+  width: 33.3%;
+  text-align: center;
+  font-size: 16px;
+  color: #777;
+  font-weight: bolder;
+  height: 30px;
+  line-height: 30px;
+}
+.container-fluid .content .project {
+  font-size: 12px;
+  margin-top: 5px;
+  border: 1px solid #888;
+  border-radius: 10px;
+}
+.container-fluid .content .project .leftimg {
+  margin-top: 5px;
+  text-align: center;
+  margin-left: -5px;
+}
+.container-fluid .content .project .leftimg img {
+  margin-left: -10px;
+  width: 100px;
+  height: 50px;
+}
+.container-fluid .content .project .l1 .starsImg {
+  margin-top: 5px;
+  background: url(../img/stars.png);
+  width: 55px;
+  height: 11px;
+  margin-left: -15px;
+  background-position: 0 0;
+  overflow: hidden;
+}
+.container-fluid .content .project .l1 p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 55px;
+  margin-left: -15px;
+  text-align: center;
+}
+.container-fluid .content .project .l1 .l1_con1 {
+  font-size: 14px;
+  font-weight: bolder;
+}
+.container-fluid .content .project .l2 {
+  margin-top: 5px;
+  margin-left: 5px;
+  border-left: 3px solid #ccc;
+}
+.container-fluid .content .project .l2 p {
+  margin-left: -8px;
+  width: 55px;
+  margin-bottom: 2px;
+}
+.container-fluid .content .project .l2 p:nth-child(1) {
+  color: #f40;
+}
+.container-fluid .content .project .l2 .l2_con1 {
+  margin-top: -2px;
+  margin-left: -8px;
+  font-size: 14px;
+  font-weight: bolder;
+}
+.container-fluid .content .project .right button {
+  margin-top: 15px;
+  margin-left: 10px;
+}

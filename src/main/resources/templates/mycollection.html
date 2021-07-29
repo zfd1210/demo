@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./src/css/xz.css">
+</head>
+
+<body>
+    <script type="text/javascript">
+    $('.attention').css("height", $(window).height() - $('.footer').height() - 11).show();</script>
+    <div class="screen container-fluid">
+       
+       
+        <!-- 关注项目 -->
+        <div class="row attention" >
+            <div class="closeBtn col-xs-12">
+                <span>我的关注</span> <span class="glyphicon glyphicon-menu-right "></span>
+                <button type="button" class="close text-right"><span>&times;</span></button>
+            </div>
+            <div class="row projects">
+                 <div class="project col-xs-12"> 
+            <div class="leftimg col-xs-4"> 
+                <img src= ""  > 
+                <span>   data.name    </span> 
+            </div> 
+            <div class="l1 col-xs-2"> 
+                <div class="starsImg "></div> 
+                <p>当前人数:</p> 
+                <p class="l1_con1">  xxx  人</p> 
+            </div> 
+            <div class="l2 col-xs-2"> 
+                <p>热度：<span>   xxx  </span> </p>   
+                 <p>预计等待</p><p class="l2_con1"> xx分钟</p>     
+            </div> 
+            <div class="right col-xs-4"> 
+                <button class="see btn btn-success">   查看详情    </button> 
+            </div> 
+        </div> 
+            </div>
+        </div>
+
+
+        <!-- 尾部固定部分 -->
+        
+    </div>
+
+    <script src="./bootstrap/js/jquery.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="./src/js/account.js"></script>
+    <script>
+        $('.wd a').css("color", "#f40");
+    </script>
+</body>
+
+</html>

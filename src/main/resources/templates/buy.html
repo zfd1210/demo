@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>基本模板</title>
+	<link href="img/favicon.png" rel="icon" />
+		
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<script src="js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css">
+		body {width: 50%; padding-top: 100px; margin: auto;}
+		#listtatal{font-family: "黑体"; font-size: 20px; text-align: center;}
+		table tr td{text-align: center;}
+		table tr th{text-align: center;}
+		#usersubmit{margin-left: 700px; padding-left: 10px;padding-right: 10px;}
+		#common{margin-left: 650px;}
+	</style>
+  </head>
+  <body>
+  	<form action="" method="post">
+  	<table class="table table-bordered"  >
+  		<figcaption id="listtatal">乘客列表</figcaption>
+  		<span id="common">通票(元/人)</span>
+
+
+  		<tr>
+  			<th>序号</th>
+  			<th>姓名th>
+  			<th>手机号</th>
+  		</tr>
+  		<tr>
+  			<td>
+  				<label class="checkbox-inline">
+  					<input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+				</label>
+  			</td>
+  			<td>张三</td>
+  			<td>16666666666</td>
+  		</tr>
+  		<tr>
+  			<td>
+  				<label class="checkbox-inline">
+  					<input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+				</label>
+  			</td>
+  			<td>李四</td>
+  			<td>16666666666</td>
+  		</tr>
+  		<tr>
+  			<td>
+  				<label class="checkbox-inline">
+  					<input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+				</label>
+  			</td>
+  			<td>王五</td>
+  			<td>16666666666</td>
+  		</tr>
+  	</table>
+  	<button class="btn btn-success submit" type="submit" id="usersubmit">提交</button>
+  	</form>
+  </body>
+</html>

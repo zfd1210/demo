@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<style type="text/css">
+	body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
+	</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>地图</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./src/css/map.css">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=jiLsIl6UvZBjBI8mF6m5CrPGPj6qnoEH"></script>
+	<script src="./bootstrap/js/jquery.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+        
+    <div class="screen container-fluid">
+        <div class="row content">
+            <div id="allmap"></div>
+        </div>
+        <!-- 尾部固定部分 -->
+        <div class="row footer">
+            <div class="sy col-xs-2 col-xs-offset-1">
+                <a href="index">
+                    <span class="glyphicon glyphicon-home"></span>
+                    <span>首页</span>
+                </a>
+            </div>
+            <div class="dt col-xs-2">
+                <a href="map">
+                    <span class="glyphicon glyphicon-map-marker"></span>
+                    <span>地图</span>
+                </a>
+            </div>
+            <div class="xx col-xs-2">
+                <a href="./message.html">
+                    <span class="glyphicon glyphicon-comment"></span>
+                    <span>信息</span>
+                </a>
+            </div>
+            <div class="dl col-xs-2">
+                <a href="./online.html">
+                    <span class="glyphicon glyphicon-flag"></span>
+                    <span>队列</span>
+                </a>
+            </div>
+            <div class="wd col-xs-2">
+                <a href="./account.html">
+                    <span class="glyphicon glyphicon-user"></span>
+                    <span>我的</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+        $('.dt a').css("color", "#f40");
+        
+    </script>
+</body>
+
+</html>
+
+<script type="text/javascript">
+(function(window){
+	/**
+	 *  数据  通过传过来的参数名获取
+	 */
+	var data = {
+		imgSrc: "./src/img/xm01.jpg", //图片资源地址
+		name: "摩天轮1",
+		intro:"这个是项目介绍这个是项目介绍这个是项目介绍这个是项目介绍这个是项目介绍这个是项目介绍"
+	}
+	
+	var height = $(window).height();
+	var footerH = $('.footer').height();
+	var ch = height - footerH - 11;
+	$('.content').height(ch);
+	$('#allmap').height(ch);
+	
+	var sContent =
+		"<div class='mmodal'>"+
+		"<p class='mtitle text-left'>"+data.name+"</p>" + 
+		"<div class='mcon'><img class='imgdemo' id='imgDemo' src='"+data.imgSrc+"' />" + 
+		"<p class='mintro'>"+data.intro+"</p></div>" + 
+		"</div>";
+		var map = new BMap.Map("allmap");
+		var point = new BMap.Point(116.885,36.710);
+		var marker = new BMap.Marker(point);
+		var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象
+		map.centerAndZoom(point, 15);
+		map.addOverlay(marker);
+		marker.addEventListener("click", function(){          
+		   this.openInfoWindow(infoWindow);
+		   //图片加载完毕重绘infowindow
+		   document.getElementById('imgDemo').onload = function (){
+			   infoWindow.redraw();   //防止在网速较慢，图片未加载时，生成的信息框高度比图片的总高度小，导致图片部分被隐藏
+			}
+		});
+	
+	
+		//接受参数
+	$(document).ready(function(){
+		proname = getUrlParamValue("proname");
+		// 进行ajax请求操作 获取当前
+		data = {}
+		console.log(proname)
+	 }); 
+	
+	 //获取浏览器上的内容并且进行处理
+	function getUrlParamValue(name) {
+		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+		var r = window.location.search.substr(1).match(reg);
+		if (r != null) return decodeURIComponent(r[2]);
+		return null;
+	}
+}(window))
+</script>

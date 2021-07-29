@@ -1,0 +1,62 @@
+.container-fluid .footer {
+  border-top: 1px solid #ccc;
+  padding-top: 8px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  z-index: 999;
+}
+.container-fluid .footer div a {
+  color: #424242;
+  text-decoration: none;
+}
+.container-fluid .footer div a span:nth-child(1) {
+  margin-left: 6px;
+  margin-right: 5px;
+}
+.container-fluid .footer div a span:nth-child(2) {
+  font-size: 14px;
+}
+.container-fluid .content img {
+  width: 100%;
+  height: 200px;
+}
+.container-fluid .content .content_msg {
+  overflow: scroll;
+}
+.container-fluid .content .content_msg .msg {
+  margin-top: 1px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  height: 72px;
+}
+.container-fluid .content .content_msg .msg .msg_image {
+  height: 70px;
+}
+.container-fluid .content .content_msg .msg .msg_image span {
+  box-sizing: border-box;
+  padding: 5px;
+  background: #ccc;
+  color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid #ccc;
+  font-size: 50px;
+}
+.container-fluid .content .content_msg .msg .msg_con {
+  height: 70px;
+  padding: 0;
+}
+.container-fluid .content .content_msg .msg .msg_con p {
+  margin-top: 20px;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.container-fluid .content .content_msg .msg .msg_time {
+  margin-top: 45px;
+  height: 20px;
+}

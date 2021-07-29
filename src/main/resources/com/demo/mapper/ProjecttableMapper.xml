@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.demo.mapper.ProjecttableMapper" >
+  <resultMap id="BaseResultMap" type="com.demo.pojo.Projecttable" >
+    <id column="projectid" property="projectid" jdbcType="INTEGER" />
+    <result column="imgSrc" property="imgsrc" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="person" property="person" jdbcType="INTEGER" />
+    <result column="waitTime" property="waittime" jdbcType="INTEGER" />
+    <result column="stars" property="stars" jdbcType="INTEGER" />
+    <result column="hot" property="hot" jdbcType="INTEGER" />
+    <result column="synthesize" property="synthesize" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    projectid, imgSrc, name, person, waitTime, stars, hot, synthesize
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.demo.pojo.ProjecttableExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from projecttable
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from projecttable
+    where projectid = #{projectid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from projecttable
+    where projectid = #{projectid,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.demo.pojo.ProjecttableExample" >
+    delete from projecttable
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.demo.pojo.Projecttable" >
+    insert into projecttable (projectid, imgSrc, name, 
+      person, waitTime, stars, 
+      hot, synthesize)
+    values (#{projectid,jdbcType=INTEGER}, #{imgsrc,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{person,jdbcType=INTEGER}, #{waittime,jdbcType=INTEGER}, #{stars,jdbcType=INTEGER}, 
+      #{hot,jdbcType=INTEGER}, #{synthesize,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.demo.pojo.Projecttable" >
+    insert into projecttable
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="projectid != null" >
+        projectid,
+      </if>
+      <if test="imgsrc != null" >
+        imgSrc,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="person != null" >
+        person,
+      </if>
+      <if test="waittime != null" >
+        waitTime,
+      </if>
+      <if test="stars != null" >
+        stars,
+      </if>
+      <if test="hot != null" >
+        hot,
+      </if>
+      <if test="synthesize != null" >
+        synthesize,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="projectid != null" >
+        #{projectid,jdbcType=INTEGER},
+      </if>
+      <if test="imgsrc != null" >
+        #{imgsrc,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="person != null" >
+        #{person,jdbcType=INTEGER},
+      </if>
+      <if test="waittime != null" >
+        #{waittime,jdbcType=INTEGER},
+      </if>
+      <if test="stars != null" >
+        #{stars,jdbcType=INTEGER},
+      </if>
+      <if test="hot != null" >
+        #{hot,jdbcType=INTEGER},
+      </if>
+      <if test="synthesize != null" >
+        #{synthesize,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.demo.pojo.ProjecttableExample" resultType="java.lang.Integer" >
+    select count(*) from projecttable
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update projecttable
+    <set >
+      <if test="record.projectid != null" >
+        projectid = #{record.projectid,jdbcType=INTEGER},
+      </if>
+      <if test="record.imgsrc != null" >
+        imgSrc = #{record.imgsrc,jdbcType=VARCHAR},
+      </if>
+      <if test="record.name != null" >
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.person != null" >
+        person = #{record.person,jdbcType=INTEGER},
+      </if>
+      <if test="record.waittime != null" >
+        waitTime = #{record.waittime,jdbcType=INTEGER},
+      </if>
+      <if test="record.stars != null" >
+        stars = #{record.stars,jdbcType=INTEGER},
+      </if>
+      <if test="record.hot != null" >
+        hot = #{record.hot,jdbcType=INTEGER},
+      </if>
+      <if test="record.synthesize != null" >
+        synthesize = #{record.synthesize,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update projecttable
+    set projectid = #{record.projectid,jdbcType=INTEGER},
+      imgSrc = #{record.imgsrc,jdbcType=VARCHAR},
+      name = #{record.name,jdbcType=VARCHAR},
+      person = #{record.person,jdbcType=INTEGER},
+      waitTime = #{record.waittime,jdbcType=INTEGER},
+      stars = #{record.stars,jdbcType=INTEGER},
+      hot = #{record.hot,jdbcType=INTEGER},
+      synthesize = #{record.synthesize,jdbcType=INTEGER}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.demo.pojo.Projecttable" >
+    update projecttable
+    <set >
+      <if test="imgsrc != null" >
+        imgSrc = #{imgsrc,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="person != null" >
+        person = #{person,jdbcType=INTEGER},
+      </if>
+      <if test="waittime != null" >
+        waitTime = #{waittime,jdbcType=INTEGER},
+      </if>
+      <if test="stars != null" >
+        stars = #{stars,jdbcType=INTEGER},
+      </if>
+      <if test="hot != null" >
+        hot = #{hot,jdbcType=INTEGER},
+      </if>
+      <if test="synthesize != null" >
+        synthesize = #{synthesize,jdbcType=INTEGER},
+      </if>
+    </set>
+    where projectid = #{projectid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.demo.pojo.Projecttable" >
+    update projecttable
+    set imgSrc = #{imgsrc,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      person = #{person,jdbcType=INTEGER},
+      waitTime = #{waittime,jdbcType=INTEGER},
+      stars = #{stars,jdbcType=INTEGER},
+      hot = #{hot,jdbcType=INTEGER},
+      synthesize = #{synthesize,jdbcType=INTEGER}
+    where projectid = #{projectid,jdbcType=INTEGER}
+  </update>
+</mapper>
